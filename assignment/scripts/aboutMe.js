@@ -22,49 +22,39 @@ let pets = 4;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
 let friendsPets = 3;
 // 11 - Add two pets to your `pets` variable
-pets = +2;
+pets = pets + 2;
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
 const allowedPets = 10;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!",
 // if it's not true, console log "How about we stay home?"
 let adventurous = true;
+
 if ( adventurous )  {
   console.log( 'Adventures are great!' );
-
 }
 else {
   console.log('How about we stay home?');
 }
+
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
 // console log "Roll the dice!"
-let notlucky = 2;
-luckyNumber = 10;
-adventurous = true;
-if (luckyNumber === notlucky ) {
-  console.log( 'Role the dice!!' );
-  if (adventurous) {
-
-  }
-
+if (luckyNumber === 2 && adventurous) {
+  console.log( 'Roll the dice!!' );
 }
 else {
-  console.log( 'Walk away!' );
+  console.log('Walk away!');
 }
 // 15 - Write a conditional that console logs "I can have more pets!"
 //if the value of `pets` is less than the value of `allowedPets`,
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
-pets = 20;
-let morepets = 20;
 
-if (pets < morepets || pets === morepets) {
+if (pets < allowedPets) {
   console.log( 'I can have more pets!' );
-  if ( 'I have enough pets!') {
-
-  }
-}
-else {
+} else if(pets === allowedPets) {
+  console.log( 'I have enough pets!');
+} else {
   console.log( 'Oh no, I have too many pets!' );
 }
 // STRETCH GOALS:
@@ -74,7 +64,19 @@ else {
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
+let mostPets
+if (pets > friendsPets) {
+  mostPets = pets
+}
+else if (pets === friendsPets) {
+  mostPets = pets
+}
 
+else if (pets < friendsPets) {
+  mostPets = friendsPets
+}
+
+console.log('mostPets', mostPets);
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
 //      "Second is the best" if your lucky number is 2
